@@ -1,0 +1,36 @@
+version: 1
+applications:
+  - appRoot: apps/admin
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm i --prefix ../../
+            - npm install
+        build:
+          commands:
+            - npm run turbo:build
+      artifacts:
+        baseDirectory: dist/
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+  - appRoot: apps/user
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm i --prefix ../../
+            - npm install
+        build:
+          commands:
+            - npm run turbo:build
+      artifacts:
+        baseDirectory: dist/
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
