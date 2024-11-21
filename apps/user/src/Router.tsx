@@ -10,7 +10,6 @@ import { authProvider } from "@repo/ui/contexts";
 
 import { productRoutes } from "./pages/product";
 import AuthenticatedContainer from "./containers/AuthenticatedContainer";
-import { SpinLoading } from "@ui/components";
 import { Home } from "./pages/home";
 
 
@@ -58,7 +57,7 @@ const router = createBrowserRouter([
 ]);
 
 const Router = () => {
-  return <RouterProvider router={router} fallbackElement={<SpinLoading />} />;
+  return <RouterProvider router={router}  />;
 };
 
 export default Router;

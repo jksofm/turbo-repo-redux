@@ -1,23 +1,25 @@
-// import { LoginForm, LoginShopForm } from "@models/auth";
+import { apiKey, apiUrl } from '@constants/env.constants';
+import { request } from '@data/api';
+import {
+  useQuery,
+ 
+} from '@tanstack/react-query'
+
+
+const proxyUrl = "https://cors-anywhere.herokuapp.com/"
+
 
 export const appService = {
-  // login: async (loginForm: LoginForm) => {
-  //   return appApi.login(loginForm);
-  // },
-  // loginShopForm: async (loginShopForm: LoginShopForm) => {
-  //   return appApi.loginShopForm(loginShopForm);
-  // },
-  // logout: async () => {
-  //   return appApi.logout();
-  // },
-  // logoutShopForm: async () => {
-  //   return appApi.logoutShopForm();
-  // },
+    useGetPlaylist : () => {
+      const getPlaylist = async () => {
+        await request(`${apiUrl}?part=snippet&maxResults=50&q=ManUnited&key=${apiKey}`, {
+          method: "GET",
+      });
+      }
+      const {data,isLoading} = useQuery({ queryKey: ['todos'], queryFn: getPlaylist })
 
-  // verify: async () => {
-  //   return appApi.verify();
-  // },
-  // getConfiguration: async () => {
-  //   return appApi.getConfiguration();
-  // },
+
+      return {data,isLoading}
+
+    }
 };

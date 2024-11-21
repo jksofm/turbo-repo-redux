@@ -48,7 +48,7 @@ export default defineConfig(({ command }) => {
       },
       host: true,
       strictPort: true,
-      port: 4001,
+      port: 4000,
     },
   };
 });
