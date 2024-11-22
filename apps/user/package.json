@@ -14,7 +14,7 @@
     "turbo:build": "npx turbo run build --filter=user"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.3.0",
+    "@ant-design/icons": "^5.5.1",
     "@reduxjs/toolkit": "^2.2.3",
     "@repo/utils": "*",
     "@tanstack/react-query": "^5.61.0",

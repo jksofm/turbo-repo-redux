@@ -8,7 +8,7 @@ const AuthenticatedContainer = () => {
       <Layout.Sider width={262}>
         <SideBar />
       </Layout.Sider>
-      <Layout>
+      <Layout >
     
         <Layout.Content>
           <Outlet />

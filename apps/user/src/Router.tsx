@@ -5,12 +5,12 @@ import {
 } from "react-router-dom";
 
 
-import { logoutLoader, protectedLoader, rootLoader } from "@repo/utils/helpers";
+import { logoutLoader, rootLoader } from "@repo/utils/helpers";
 import { authProvider } from "@repo/ui/contexts";
 
-import { productRoutes } from "./pages/product";
-import AuthenticatedContainer from "./containers/AuthenticatedContainer";
 import { Home } from "./pages/home";
+import { AuthenticatedContainer } from "./containers";
+import { Video } from "./pages/video";
 
 
 
@@ -21,10 +21,11 @@ const protectedRoutes: RouteObject[] = [
     Component: Home ,
   },
   {
-    id: "products",
-    path: "/products",
-    children: productRoutes,
-  },
+    id: "video-detail",
+    path: "video",
+    Component: Video
+  }
+
 
 ];
 
