@@ -15,7 +15,7 @@ export const AuthenticatedContainer = () => {
         <>Loading...</>
       ) : (
         <>
-        <AntdLayout.Sider className="h-full overflow-y-scroll" width={300} >
+        <AntdLayout.Sider className="h-full" width={300} >
           <Sidebar />
         </AntdLayout.Sider>
         <AntdLayout className="box-border flex-1 bg-black">

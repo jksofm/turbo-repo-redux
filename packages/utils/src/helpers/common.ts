@@ -25,3 +25,16 @@ export function debounce<T extends (...args: any[]) => any>(
     return relativeTimeString
   }
 
+ export  function filterMainContent(text:string) {
+    // Remove any unnecessary parts such as filenames and special characters
+    // This regex pattern captures and removes text fragments before and after the main content
+    const filtered = text.replace(/(?<=\/ )[^|]+|\s*\|.+/g, '').trim();
+    return filtered;
+}
+export function decodeURIComponent(encodedString:string) {
+  if(!encodedString) return ""
+  // Decode the percent-encoded characters
+  return encodedString.replace(/%([0-9A-F]{2})/g, function (match, p1) {
+      return String.fromCharCode(parseInt(p1, 16));
+  });
+}

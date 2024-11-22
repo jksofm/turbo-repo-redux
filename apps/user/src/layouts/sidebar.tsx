@@ -5,11 +5,12 @@ export function Sidebar() {
 
 
   return (
-    <div className="pl-[30px] h-full overflow-y-scroll bg-black py-8 pr-6">
+    <div className="pl-[30px] h-[100vh] flex flex-col  bg-black py-8 pr-6">
      <div className="w-full pl-[5px] flex justify-between items-center mb-7">
        <Link to="/"> <YoutubeIcon /></Link>
         <MenuIcon />
      </div>
+     <div className="flex-1 overflow-y-scroll">
      <div className="flex pl-[5px] border-b border-b-[#e5e7eb29] pb-[30px] flex-col gap-4"
      >
         {menuItems.map((item) => {
@@ -56,9 +57,12 @@ export function Sidebar() {
        </div>
     })}
 </div>
-</div>
-
 <div className="p3 mt-[185px] block">© 2021 Google LLC</div>
+</div>
+     </div>
+ 
+
+
     </div>
 
   )
